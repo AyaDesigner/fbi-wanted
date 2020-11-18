@@ -26,7 +26,9 @@ class WantedList extends React.Component {
         fetch('https://api.fbi.gov/wanted/v1/list', {
             mode: 'cors',
             headers: {
-              'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': 'true',
+                'Access-Control-Expose-Headers': '*'
             }
         })
             .then(objectResponse => {
