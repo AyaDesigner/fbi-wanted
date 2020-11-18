@@ -24,9 +24,11 @@ class WantedList extends React.Component {
     getWantedList() {
 
         fetch('https://api.fbi.gov/wanted/v1/list', {
+            mode: 'cors',
             headers: {
               'Access-Control-Allow-Origin': '*'
-            })
+            }
+        })
             .then(objectResponse => {
                 return objectResponse.json();
             })
